@@ -11,7 +11,12 @@
 ### Update Build Script
 Inside of Vivado IDE, do the following to regenerate the build script:
 - Run the following command in the TCL Console:
-  ```
-  write_project_tcl -force ./scripts/rebuild.tcl
-  ```
+  - Linux
+    ```
+    write_project_tcl -force ./scripts/linux_rebuild.tcl
+    ```
+  - Windows
+    ```
+    write_project_tcl -force ./scripts/windows_rebuild.tcl
+    ```
   ![alt text](images/rebuild.png)

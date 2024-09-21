@@ -28,7 +28,6 @@
 # 3. The following remote source files that were added to the original project:-
 #
 #    "H:/Develop/fpga-gameboy/src/cpu/alu.v"
-#    "H:/Develop/fpga-gameboy/src/top_module.v"
 #    "H:/Develop/fpga-gameboy/constraints/Zybo-Z7-Master.xdc"
 #
 #*****************************************************************************************
@@ -38,7 +37,6 @@ proc checkRequiredFiles { origin_dir} {
   set status true
   set files [list \
  "[file normalize "$origin_dir/src/cpu/alu.v"]"\
- "[file normalize "$origin_dir/src/top_module.v"]"\
  "[file normalize "$origin_dir/constraints/Zybo-Z7-Master.xdc"]"\
   ]
   foreach ifile $files {
@@ -59,7 +57,7 @@ if { [info exists ::origin_dir_loc] } {
 }
 
 # Set the project name
-set _xil_proj_name_ "project"
+set _xil_proj_name_ "vivado_project"
 
 # Use project name variable, if specified in the tcl shell
 if { [info exists ::user_project_name] } {
@@ -163,7 +161,6 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 set obj [get_filesets sources_1]
 set files [list \
  [file normalize "${origin_dir}/src/cpu/alu.v"] \
- [file normalize "${origin_dir}/src/top_module.v"] \
 ]
 add_files -norecurse -fileset $obj $files
 

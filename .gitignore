@@ -3,7 +3,7 @@
 *.log
 *.jou
 *.str
-/project
+/vivado_project
 
 # KiCad files
 # Temporary files

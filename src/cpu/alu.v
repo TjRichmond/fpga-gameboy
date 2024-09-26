@@ -21,11 +21,22 @@
 
 
 module alu(
-    input [7:0] operand1,
-    input [7:0] operand2,
-    input [3:0] operation,
-    output [7:0] result,
-    output zero_flag,
-    output carry_flag
+    input wire [7:0] operand1,
+    input wire [7:0] operand2,
+    input wire [4:0] opcode,
+    output reg [7:0] result,
+    output reg zero_flag,
+    output reg carry_flag
     );
+    
+    localparam ADD = 4'b1000;
+    localparam SUB = 4'b1001;
+    
+    always @(*) begin
+        case (opcode)
+            ADD: result = operand1 + operand2;
+            SUB: result = operand1 - operand2;
+            default: result = 8'b0;
+        endcase
+    end
 endmodule

@@ -1,9 +1,83 @@
-# Vivado files
-.Xil
+# Generated project folders
+/vivado_project
+/vitis_project
+/Gameboy
+/Gameboy_PL
+/Gameboy_PS
+src/Gameboy_PL
+
+# Vivado-generated directories
+*.runs/
+*.srcs/
+*.sim/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.ipdefs/
+.Xil/
+.Xcver/
+
+# Vivado output files
+*.bit
+*.bin
+*.elf
+*.jou
+*.log
+*.html
+*.xml
+*.rpt
+*.str
+
+# Lock and Metadata Files
+*.lck
+*.log.lock
+vivado.log
+vivado.jou
+
+# Implementation Results
+*.dcp
+*.svf
+*.xdc
+
+# Miscellaneous Vivado Files
+*.wdb
+*.webtalk/
+
+# Vitis files
+*.bsp/
+*.metadata/
+*.sdk/
+bsp/
+
+# Vitis build directories
+Debug/
+Release/
+*.build/
+.vscode/
+
+# Vitis compiled output
+*.elf
+*.o
+*.a
+*.so
+*.bin
+
+# Vitis log and metadata files
 *.log
 *.jou
-*.str
-/vivado_project
+*.xsa
+*.xml
+
+# Vitis IDE-specific files
+.project
+.cproject
+.settings/
+.launches/
+
+# Vitis miscellaneous
+*.lock
+.DS_Store
+.analytics
 
 # KiCad files
 # Temporary files
